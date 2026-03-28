@@ -1,6 +1,18 @@
-# Google Keep Desktop for Linux
+# 📝 Google Keep Desktop for Linux
 
-A simple and lightweight tool to install Google Keep as a desktop app on Linux.
+A lightweight, native, and privacy-focused tool built for Linux.
 
-## How to use
-Run the `install.sh` script to set up the application.
+## ✨ Features
+- 🚀 Ultrafast Launch
+- 💾 Low RAM Usage
+- 🛡️ Privacy Centric
+
+## 🛠️ Installation
+```bash
+git clone https://github.com/ache-memories/google-keep-linux.git
+cd google-keep-linux
+./install.sh
+```
+
+## 💖 Support
+[☕ Buy Me a Coffee](https://ko-fi.com/achememories) | [💸 PayPal](https://paypal.me/ache-memories)
