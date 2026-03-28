@@ -1,2 +1,2 @@
 # Google Keep Desktop for Linux
-اداة بسيطة لتثبيت جوجل كيب كنسخة سطح مكتب على لينكس.
+git commit --amend -m "Initial release of Google Keep Desktop for Linux".
