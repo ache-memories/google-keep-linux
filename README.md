@@ -2,10 +2,13 @@
 
 A lightweight, native, and privacy-focused tool built for Linux.
 
+## 📸 Screenshot
+<p align='center'><img src='https://www.gstatic.com/images/branding/product/2x/keep_96dp.png' width='100'></p>
+
 ## ✨ Features
-- 🚀 Ultrafast Launch
-- 💾 Low RAM Usage
-- 🛡️ Privacy Centric
+- 🚀 **Ultrafast Launch:** Opens in milliseconds.
+- 💾 **Low RAM Usage:** Uses native WebKit engine.
+- 🛡️ **Privacy Centric:** No trackers.
 
 ## 🛠️ Installation
 ```bash

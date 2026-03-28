@@ -1,48 +1,31 @@
 #!/bin/bash
+APP_NAME="Google Keep"
+EXEC_NAME="google-keep"
+INSTALL_DIR="$HOME/.local/bin"
+DESKTOP_DIR="$HOME/.local/share/applications"
+ICON_URL="https://www.gstatic.com/images/branding/product/2x/keep_96dp.png"
+ICON_PATH="$HOME/.local/share/icons/google-keep.png"
 
-# تعريف المتغيرات الاساسية
-APP_NAME="Google Keep Desktop"
-ICON_NAME="google-keep-icon.png"
-ICON_URL="https://upload.wikimedia.org/wikipedia/commons/e/e5/Google_Keep_icon_%282020%29.svg"
-APP_DIR="$HOME/.local/share/applications"
-ICON_DIR="$HOME/.local/share/icons"
+echo "🚀 Installing Google Keep Desktop..."
+mkdir -p "$INSTALL_DIR" "$DESKTOP_DIR" "$(dirname "$ICON_PATH")"
+curl -s -L "$ICON_URL" -o "$ICON_PATH"
 
-echo "بدء عملية تثبيت $APP_NAME..."
+cat << INNER_EOF > "$INSTALL_DIR/$EXEC_NAME"
+#!/bin/bash
+zenity --browser --url="https://keep.google.com/" --title="Google Keep" --width=1000 --height=800
+INNER_EOF
 
-# انشاء المجلدات اذا لم تكن موجودة
-mkdir -p "$ICON_DIR"
-mkdir -p "$APP_DIR"
+chmod +x "$INSTALL_DIR/$EXEC_NAME"
 
-# تحميل الايقونة
-echo "جاري تحميل الايقونة..."
-curl -sL "$ICON_URL" -o "$ICON_DIR/$ICON_NAME"
-
-# البحث عن المتصفح المتوفر
-if command -v google-chrome &> /dev/null; then
-    CHROME_BIN="google-chrome"
-elif command -v brave-browser &> /dev/null; then
-    CHROME_BIN="brave-browser"
-elif command -v chromium &> /dev/null; then
-    CHROME_BIN="chromium"
-else
-    echo "خطا: لم يتم العثور على متصفح يدعم وضع App. يرجى تثبيت Chrome او Brave اولا."
-    exit 1
-fi
-
-# انشاء ملف الـ .desktop
-cat <<EOT > "$APP_DIR/google-keep.desktop"
+cat << INNER_EOF > "$DESKTOP_DIR/$EXEC_NAME.desktop"
 [Desktop Entry]
 Version=1.0
-Name=Google Keep
-Comment=Keep notes and lists
-Exec=$CHROME_BIN --app=https://keep.google.com --user-data-dir=\$HOME/.config/google-keep-desktop
-Terminal=false
 Type=Application
-Icon=$ICON_DIR/$ICON_NAME
+Name=$APP_NAME
+Exec="$INSTALL_DIR/$EXEC_NAME"
+Icon=$ICON_PATH
+Terminal=false
 Categories=Office;Utility;
-StartupWMClass=keep.google.com
-EOT
+INNER_EOF
 
-chmod +x "$APP_DIR/google-keep.desktop"
-
-echo "تم التثبيت بنجاح! يمكنك الان فتح Google Keep من قائمة التطبيقات."
+echo "✅ Done! Find it in your apps menu."
