@@ -3,7 +3,7 @@
 A lightweight, native, and privacy-focused tool built for Linux.
 
 ## 📸 Screenshot
-<p align='center'><img src='https://www.gstatic.com/images/branding/product/2x/keep_96dp.png' width='100'></p>
+<p align='center'><img src='https://www.gstatic.com/images/branding/product/2x/keep_96dp.png' width='64' height='64'></p>
 
 ## ✨ Features
 - 🚀 **Ultrafast Launch:** Opens in milliseconds.
