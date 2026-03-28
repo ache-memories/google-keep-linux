@@ -17,5 +17,16 @@ cd google-keep-linux
 ./install.sh
 ```
 
-## 💖 Support
-[☕ Buy Me a Coffee](https://ko-fi.com/achememories) | [💸 PayPal](https://paypal.me/ache-memories)
+## 💖 Support and Donation
+If you find this project useful, please consider supporting the developer:
+
+| Method | Link / Address |
+| :--- | :--- |
+| ☕ **Ko-fi** | [Donate on Ko-fi](https://ko-fi.com/adnan_hasan) |
+| 💸 **PayPal** | [Support via PayPal](https://paypal.me/achememories) |
+| 🪙 **BTC** | `15cfHvdGpm9JjU64hyUxxK3YBatpJ9v7iX` |
+| 🔷 **ETH** | `0xb15518d8e03d53f9e2cb37d7adfacb0b87f01d09` |
+| 🟢 **USDT (TRC20)** | `TUTfLjNJinM8hiuTenhaugLy1oenVWot3b` |
+
+--- 
+*MIT License - Copyright (c) 2026 Adnan Hasan*
